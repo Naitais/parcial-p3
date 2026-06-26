@@ -1,14 +1,13 @@
-# Módulo de Registro y Login
+# Módulo de Registro y Login (parcial programación 3)
 
 ## Descripción
 
-Módulo de registro y autenticación de usuarios desarrollado con HTML, CSS y JavaScript puro (sin frameworks ni backend). Los datos se almacenan en el navegador usando localStorage. Las peticiones al servidor se simulan con async/await.
+Módulo de registro y autenticación de usuarios desarrollado con HTML, CSS y JavaScript. Los datos se almacenan en el navegador usando localStorage. Las peticiones al servidor se simulan con async/await.
 
 ## Instrucciones para ejecutar
 
 1. Descargar o clonar el repositorio
-2. Abrir el archivo `index.html` en cualquier navegador
-3. No requiere instalación adicional ni servidor
+2. Abrir el archivo `index.html`
 
 ## Usuario de prueba
 
@@ -22,9 +21,9 @@ Para probar el login, primero registrar un usuario o usar los siguientes datos d
 ```
 /parcial-p3
 ├── index.html    → Página principal con formularios de registro y login
-├── styles.css    → Estilos visuales (Flexbox, colores, animaciones)
+├── styles.css    → CSS
 ├── app.js        → Lógica de validación, registro, login y manipulación del DOM
-└── README.md     → Este archivo
+└── README.md     → readme
 ```
 
 ## Esquema del código (app.js)
@@ -97,7 +96,7 @@ flowchart TD
 
 ## Tecnologías utilizadas
 
-- HTML5
-- CSS3 (Flexbox)
-- JavaScript (ES6, async/await)
+- HTML
+- CSS
+- JavaScript
 - localStorage para persistencia de datos
