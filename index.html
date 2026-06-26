@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro y Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor principal centrado con Flexbox -->
+    <div class="auth-container">
+        <div class="auth-card">
+
+            <!-- ===== FORMULARIO DE REGISTRO ===== -->
+            <div id="seccion-registro">
+                <h2>Crear Cuenta</h2>
+                <p class="subtitulo">Completá tus datos para registrarte</p>
+
+                <form id="formRegistro">
+                    <label for="reg-nombre">Nombre y Apellido</label>
+                    <input type="text" id="reg-nombre" placeholder="Juan Pérez">
+                    <span class="error" id="error-nombre"></span>
+
+                    <label for="reg-email">Email</label>
+                    <input type="text" id="reg-email" placeholder="correo@ejemplo.com">
+                    <span class="error" id="error-email"></span>
+
+                    <label for="reg-password">Contraseña</label>
+                    <input type="password" id="reg-password" placeholder="••••••••">
+                    <span class="error" id="error-password"></span>
+
+                    <label for="reg-confirmar">Confirmar Contraseña</label>
+                    <input type="password" id="reg-confirmar" placeholder="••••••••">
+                    <span class="error" id="error-confirmar"></span>
+
+                    <label for="reg-fecha">Fecha de Nacimiento</label>
+                    <input type="date" id="reg-fecha">
+                    <span class="error" id="error-fecha"></span>
+
+                    <div class="checkbox-grupo">
+                        <input type="checkbox" id="reg-terminos">
+                        <label for="reg-terminos">Acepto los términos y condiciones</label>
+                    </div>
+                    <span class="error" id="error-terminos"></span>
+
+                    <button type="submit">Registrarse</button>
+                </form>
+
+                <div class="auth-footer">
+                    ¿Ya tenés cuenta? <a href="#" id="btn-ir-login">Iniciá sesión aquí</a>
+                </div>
+            </div>
+
+            <!-- ===== FORMULARIO DE LOGIN ===== -->
+            <div id="seccion-login" style="display: none;">
+                <h2>Iniciar Sesión</h2>
+                <p class="subtitulo">Ingresá con tu cuenta</p>
+
+                <form id="formLogin">
+                    <label for="login-email">Email</label>
+                    <input type="text" id="login-email" placeholder="correo@ejemplo.com">
+                    <span class="error" id="error-login-email"></span>
+
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" placeholder="••••••••">
+                    <span class="error" id="error-login-password"></span>
+
+                    <button type="submit">Entrar</button>
+                </form>
+
+                <!-- Mensaje de resultado del login (éxito o error) -->
+                <div id="mensaje-login"></div>
+
+                <div class="auth-footer">
+                    ¿No tenés cuenta? <a href="#" id="btn-ir-registro">Registrate aquí</a>
+                </div>
+            </div>
+
+            <!-- Mensaje de cargando (se muestra durante la simulación async) -->
+            <div id="cargando" style="display: none;">Cargando...</div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
