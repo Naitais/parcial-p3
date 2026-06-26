@@ -45,7 +45,7 @@ function validarRegistro() {
     var email = document.getElementById("reg-email").value;
     var password = document.getElementById("reg-password").value;
     var confirmar = document.getElementById("reg-confirmar").value;
-    var fecha = document.getElementById("reg-fecha").value;
+    //var fecha = document.getElementById("reg-fecha").value;
     var terminos = document.getElementById("reg-terminos").checked;
 
     // Valido que el nombre no esté vacío
@@ -95,12 +95,6 @@ function validarRegistro() {
         esValido = false;
     }
 
-    // Valido que la fecha de nacimiento no esté vacía
-    if (fecha === "") {
-        mostrarError("error-fecha", "La fecha de nacimiento es obligatoria");
-        esValido = false;
-    }
-
     // Valido que el checkbox de términos esté seleccionado
     if (!terminos) {
         mostrarError("error-terminos", "Debés aceptar los términos y condiciones");
@@ -140,7 +134,7 @@ async function registrarUsuario(e) {
     var email = document.getElementById("reg-email").value;
     var nombre = document.getElementById("reg-nombre").value;
     var password = document.getElementById("reg-password").value;
-    var fecha = document.getElementById("reg-fecha").value;
+//    var fecha = document.getElementById("reg-fecha").value;
 
     // Verifico que el email no esté ya registrado
     var usuarios = obtenerUsuarios();
@@ -159,7 +153,7 @@ async function registrarUsuario(e) {
         nombre: nombre,
         email: email,
         password: password,
-        fecha: fecha
+        //fecha: fecha
     };
     await fakeRequest(nuevoUsuario);
 
