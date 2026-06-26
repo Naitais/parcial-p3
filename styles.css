@@ -1,0 +1,213 @@
+/* ===== FUENTE DE GOOGLE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* ===== VARIABLES DE COLORES ===== */
+:root {
+    --bg-color: #0f0f1a;
+    --surface-color: rgba(30, 25, 50, 0.85);
+    --border-color: rgba(120, 80, 220, 0.2);
+    --primary-color: #7c3aed;
+    --primary-hover: #5b21b6;
+    --text-primary: #f3f4f6;
+    --text-secondary: #a0a0c0;
+    --danger: #ef4444;
+    --success: #10b981;
+}
+
+/* ===== RESET BASICO ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== BODY - CENTRADO CON FLEXBOX ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle at top right, rgba(124, 58, 237, 0.1), transparent 50%);
+}
+
+/* ===== CONTENEDOR PRINCIPAL (FLEXBOX) ===== */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* ===== TARJETA DEL FORMULARIO ===== */
+.auth-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* ===== TITULOS ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 26px;
+    color: var(--text-primary);
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+/* ===== LABELS ===== */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ===== INPUTS ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(15, 15, 30, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-bottom: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.15);
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox-grupo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.checkbox-grupo input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-grupo label {
+    margin-bottom: 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ===== MENSAJES DE ERROR ===== */
+.error {
+    display: block;
+    color: var(--danger);
+    font-size: 12px;
+    min-height: 18px;
+    margin-bottom: 8px;
+}
+
+/* ===== BOTON ===== */
+button {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, var(--primary-hover), #4c1d95);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ===== PIE DEL FORMULARIO (LINKS) ===== */
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MENSAJE DE CARGANDO ===== */
+#cargando {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 14px;
+    margin-top: 16px;
+    animation: parpadeo 1s infinite;
+}
+
+/* ===== MENSAJE DE LOGIN (EXITO/ERROR) ===== */
+#mensaje-login {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 14px;
+    min-height: 20px;
+}
+
+.mensaje-exito {
+    color: var(--success);
+}
+
+.mensaje-error {
+    color: var(--danger);
+}
+
+/* ===== ANIMACION FADE IN ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== ANIMACION PARPADEO PARA CARGANDO ===== */
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
